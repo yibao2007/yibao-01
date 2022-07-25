@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>flex</title>
+    <title>yibao2007</title>
     <style>
       body {
         margin: 0;
         height: 100vh;
         background-color: #eee;
       }
-      article{
-        padding: 12px;
+      article {
+        padding: 0px;
       }
 
       .flex {
@@ -29,6 +29,9 @@
       }
       .baise {
         background-color: white;
+      }
+      .wqylike {
+        background-color: rgba(0, 255, 25, 0.3);
       }
       .bear {
         border: 2px solid rgba(49, 12, 182, 0.3);
@@ -59,6 +62,24 @@
         -moz-box-shadow: 0px 3px 3px #c8c8c8;
         box-shadow: 0px 3px 3px #c8c8c8;
       }
+      @media (max-width: 600px) {
+        .cebian {
+          display: none;
+        }
+        .neirong {
+          flex-direction: column;
+        }
+        .fennei {
+          flex-direction: column;
+        }
+        .youqu {
+          margin: 8px;
+        }
+        .shuju {
+          margin: 0, 0, 8px;
+          flex: auto;
+        }
+      }
     </style>
   </head>
   <body class="flex flex1 column">
@@ -80,63 +101,75 @@
     <!--main-->
     <div style="overflow: auto" class="flex flex1">
       <!--侧边栏-->
-      <div style="width: 150px; z-index: 2" class="flex column mgt8 mgl8">
+      <div style="flex: 1; z-index: 2" class="flex column mgt8 mgl8 cebian">
         <!--目录-->
         <div style="height: 35px" class="flex baise column xuanfu"></div>
         <div style="height: 35px" class="flex baise column mgt8 xuanfu"></div>
         <div style="height: 35px" class="flex baise column mgt8 xuanfu"></div>
         <div style="height: 35px" class="flex baise column mgt8 xuanfu"></div>
         <div style="height: 35px" class="flex baise column mgt8 xuanfu"></div>
-        <div style="height: 500px" class="flex baise column xuanfu"></div>
+        <div style="height: 500px" class="flex baise column mgt8 xuanfu"></div>
       </div>
       <!--中间栏-->
-      <div style="width: auto" class="flex1 flex column mg8">
+      <div style="flex: 9" class="flex1 flex column mg8 neirong">
         <!--分类-->
-        <div style="flex: 1" class="flex flex1">
-          <div style="flex: 1" class="flex baise mgr8 xuanfu"></div>
-          <div style="flex: 1" class="flex baise mgr8 xuanfu"></div>
-          <div style="flex: 1" class="flex baise mgr8 xuanfu"></div>
-          <div style="flex: 1" class="flex baise mgr8 xuanfu"></div>
-          <div style="flex: 1" class="flex baise xuanfu"></div>
+        <div class="flex fennei">
+          <div style="height: 100px" class="flex flex1 baise mgr8 xuanfu"></div>
+          <div style="height: 100px" class="flex flex1 baise mgr8 xuanfu"></div>
+          <div style="height: 100px" class="flex flex1 baise mgr8 xuanfu"></div>
+          <div style="height: 100px" class="flex flex1 baise mgr8 xuanfu"></div>
+          <div style="height: 100px" class="flex flex1 baise xuanfu"></div>
         </div>
         <!--内容-->
-        <div style="flex: 8" class="flex flex1 column">
+        <div class="flex column">
           <!--内容1-->
-          <article style="height: 300px" class="flex column baise xuanfu">
-            欢迎来到我们的网站
-          </article>
+          <div
+            style="height: 240px; padding: 30px"
+            class="flex column mgt8 baise xuanfu"
+          >
+            <h1 style="text-align: center; font-size: 25px">
+              我们为什么热爱田径
+            </h1>
+            不克不及承认，我们借是田径项目标外行人，我们对田径的熟悉借处正在懵懂阶段，我们对田径纪律的理解近已到达由表及里，但一切那些其实不影响由根本忽视到逐步爱上那项活动。只需道到以往“道马色变”的马推紧，人们便会会意一笑。确实，从将那项活动“妖魔化”到那项活动愈来愈变得人睹人爱，仿佛其实不需求逾越甚么停滞，需求的也只是充足宽紧的办赛氛逐步成生的社会化效劳和不竭提拔的园地供应认识。
+            <br />
+            比拟于顶级田径年夜赛的到去，爱上田径活动无疑更加主要。固然，让曾经到去的年夜赛动员更多人爱上田径活动，也当做为办赛的题中应有之义。而让我们爱上田径的来由究竟是甚么？那个成绩能够从马推紧喜好者的满意满意中找到谜底，也能够从“田径是个好工具”的朴实感情中找到谜底。能够道，酷爱糊口便是爱上田径的最年夜来由。
+            <br />
+            虽然提高力度借不敷年夜，虽然园地前提借不敷好，虽然不雅视者总比到场者多，虽然现场不雅赛借出有成为实正的活动喜好，但田径的种子一经洒进内心，便会死根、抽芽、着花、成果，进而构成囊括神州年夜地的健身风暴。
+            <br />
+            让更多人果为酷爱糊口而爱上田径，我们有来由布满等待。
+          </div>
           <!--内容2-->
-          <article style="height: 300px" class="flex column mgt8 baise xuanfu">
+          <div style="height: 300px" class="flex column mgt8 baise xuanfu">
             欢迎来到我们的网站
-          </article>
+          </div>
           <!--内容3-->
-          <article style="height: 300px" class="flex column mgt8 baise xuanfu">
+          <div style="height: 300px" class="flex column mgt8 baise xuanfu">
             欢迎来到我们的网站
-          </article>
+          </div>
           <!--内容4-->
-          <article style="height: 300px" class="flex column mgt8 baise xuanfu">
+          <div style="height: 300px" class="flex column mgt8 baise xuanfu">
             欢迎来到我们的网站
-          </article>
+          </div>
           <!--内容5-->
-          <article style="height: 300px" class="flex column mgt8 baise xuanfu">
+          <div style="height: 300px" class="flex column mgt8 baise xuanfu">
             欢迎来到我们的网站
-          </article>
+          </div>
           <!--内容6-->
-          <article style="height: 300px" class="flex column mgt8 baise xuanfu">
+          <div style="height: 300px" class="flex column mgt8 baise xuanfu">
             欢迎来到我们的网站
-          </article>
+          </div>
           <!--内容7-->
-          <article style="height: 300px" class="flex column mgt8 baise xuanfu">
+          <div style="height: 300px" class="flex column mgt8 baise xuanfu">
             欢迎来到我们的网站
-          </article>
+          </div>
           <!--内容8-->
-          <article style="height: 300px" class="flex column mgt8 baise xuanfu">
+          <div style="height: 300px" class="flex column mgt8 baise xuanfu">
             欢迎来到我们的网站
-          </article>
+          </div>
         </div>
       </div>
       <!--侧边栏-->
-      <div style="width: 300px" class="flex column mgt8 mgr8">
+      <div style="flex: 2" class="flex column mgt8 mgr8 neirong">
         <!--提示-->
         <div style="height: 618px" class="flex baise xuanfu"></div>
         <!--消息-->
