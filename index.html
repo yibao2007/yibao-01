@@ -1,27 +1,146 @@
-<!DOCTYOE html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta sharset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="css of index.css" />
-    <title>yibao2007</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      article{
+        padding: 12px;
+      }
+
+      .flex {
+        display: flex;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .row {
+        flex-direction: row;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .baise {
+        background-color: white;
+      }
+      .bear {
+        border: 2px solid rgba(49, 12, 182, 0.3);
+        border-radius: 12px;
+        max-width: 120px;
+        max-height: 56px;
+      }
+      .between {
+        justify-content: space-between;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .mgl8 {
+        margin-left: 8px;
+      }
+      .mgb8 {
+        margin-bottom: 8px;
+      }
+      .xuanfu {
+        -webkit-box-shadow: 0px 3px 3px #c8c8c8;
+        -moz-box-shadow: 0px 3px 3px #c8c8c8;
+        box-shadow: 0px 3px 3px #c8c8c8;
+      }
+    </style>
   </head>
-  <body style="margin: 0">
-    <div class="head">
-      <h1 style="text-align: center; font-size: 50px">我的个人网站</h1>
+  <body class="flex flex1 column">
+    <!--顶部-->
+    <div style="height: 60px; z-index: 1" class="flex">
+      <!--左部分-->
+      <div style="width: 120px; height: 60px" class="flex column xuanfu mgl8">
+        <img
+          src="https://tse4-mm.cn.bing.net/th/id/OIP-C.Wsjc3_qoXG_m5yTVN0Oa8AHaET?pid=ImgDet&rs=1"
+          alt="unlucky bear"
+          class="bear"
+        />
+      </div>
+      <!--中间部分-->
+      <div style="flex: 15" class="flex column baise mgr8 xuanfu"></div>
+      <!--右部分-->
+      <div style="flex: 1" class="flex column baise xuanfu mgr8"></div>
     </div>
-    <div id="box1">
-      <div class="ex1">
-        这是第一个框阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴
+    <!--main-->
+    <div style="overflow: auto" class="flex flex1">
+      <!--侧边栏-->
+      <div style="width: 150px; z-index: 2" class="flex column mgt8 mgl8">
+        <!--目录-->
+        <div style="height: 35px" class="flex baise column xuanfu"></div>
+        <div style="height: 35px" class="flex baise column mgt8 xuanfu"></div>
+        <div style="height: 35px" class="flex baise column mgt8 xuanfu"></div>
+        <div style="height: 35px" class="flex baise column mgt8 xuanfu"></div>
+        <div style="height: 35px" class="flex baise column mgt8 xuanfu"></div>
+        <div style="height: 500px" class="flex baise column xuanfu"></div>
       </div>
-      <div class="ex2">
-        这是第二个框阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴
+      <!--中间栏-->
+      <div style="width: auto" class="flex1 flex column mg8">
+        <!--分类-->
+        <div style="flex: 1" class="flex flex1">
+          <div style="flex: 1" class="flex baise mgr8 xuanfu"></div>
+          <div style="flex: 1" class="flex baise mgr8 xuanfu"></div>
+          <div style="flex: 1" class="flex baise mgr8 xuanfu"></div>
+          <div style="flex: 1" class="flex baise mgr8 xuanfu"></div>
+          <div style="flex: 1" class="flex baise xuanfu"></div>
+        </div>
+        <!--内容-->
+        <div style="flex: 8" class="flex flex1 column">
+          <!--内容1-->
+          <article style="height: 300px" class="flex column baise xuanfu">
+            我是傻逼
+          </article>
+          <!--内容2-->
+          <article style="height: 300px" class="flex column mgt8 baise xuanfu">
+            我是傻逼
+          </article>
+          <!--内容3-->
+          <article style="height: 300px" class="flex column mgt8 baise xuanfu">
+            我是傻逼
+          </article>
+          <!--内容4-->
+          <article style="height: 300px" class="flex column mgt8 baise xuanfu">
+            我是傻逼
+          </article>
+          <!--内容5-->
+          <article style="height: 300px" class="flex column mgt8 baise xuanfu">
+            我是傻逼
+          </article>
+          <!--内容6-->
+          <article style="height: 300px" class="flex column mgt8 baise xuanfu">
+            我是傻逼
+          </article>
+          <!--内容7-->
+          <article style="height: 300px" class="flex column mgt8 baise xuanfu">
+            我是傻逼
+          </article>
+          <!--内容8-->
+          <article style="height: 300px" class="flex column mgt8 baise xuanfu">
+            我是傻逼
+          </article>
+        </div>
       </div>
-      <div class="ex3">
-        这是第三个框阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴
-      </div>
-      <div class="ex4">
-        这是第四个框阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴
+      <!--侧边栏-->
+      <div style="width: 300px" class="flex column mgt8 mgr8">
+        <!--提示-->
+        <div style="height: 618px" class="flex baise xuanfu"></div>
+        <!--消息-->
+        <div style="height: 1000px" class="flex mgt8 baise xuanfu"></div>
       </div>
     </div>
   </body>
